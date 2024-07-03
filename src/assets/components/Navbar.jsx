@@ -31,7 +31,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 <div
-                  className={`relative text-md font-normal sm:font-semibold w-full flex flex-col sm:flex-row gap-4 sm:gap-10 justify-start   items-start sm:items-center transition-all duration-300 ease-in-out pl-4 sm:pl-0 pt-6 sm:pt-0 ${
+                  className={`relative text-md font-normal sm:font-normal text-fucsia w-full flex flex-col sm:flex-row gap-4 sm:gap-10 justify-start   items-start sm:items-center transition-all duration-300 ease-in-out pl-4 sm:pl-0 pt-6 sm:pt-0 ${
                     estadoMenu ? "" : "hidden"
                   } sm:flex`}
                 >
@@ -111,7 +111,7 @@ const Navbar = () => {
         </div>
         <div className="text-center mx-auto p-4">
           <span className="font-semibold p-2 bg-gradient-to-r from-fucsia to-fuchsia-950 rounded-tr-full rounded-bl-full  pl-10 pr-10 text-white">
-            Empieza Ahora
+            ¡Empieza Ahora!
           </span>
           
         </div>
