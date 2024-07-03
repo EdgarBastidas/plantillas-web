@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        fondo: "#000713",//color de fondo oscuro
+        fondo: "#000710",//color de fondo oscuro
+        fondo2: "#000713",//color de fondo oscuro
         fucsia: "#9C1039", // color de fondo blanco
         
       },

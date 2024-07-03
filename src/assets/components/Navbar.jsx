@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <div className="w-full fixed z-10">
         <div className="">
-          <nav className="bg-fondo p-2 sm:p-8">
+          <nav className="bg-fondo p-2 sm:p-4">
             <div className="mx-auto">
               <div className="flex flex-col items-center sm:flex-row ">
                 <div className="relative">
@@ -99,8 +99,8 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
-      <div className="z-0 bg-fondo full">
-        <div className="pt-16 sm:pt-28 font-bold text-center  text-white">
+      <div className="z-0 bg-fondo2 pb-2">
+        <div className="pt-16 sm:pt-[70px] font-bold text-center  text-white">
           <h1 className="pt-2 pl-2 pr-2 sm:pt-6 text-[2.5vh] sm:text-4xl">
             Descarga, personaliza y edita a tu gusto
           </h1>
@@ -110,10 +110,12 @@ const Navbar = () => {
           </p>
         </div>
         <div className="text-center mx-auto p-4">
-          <span className="font-semibold p-2 bg-gradient-to-r from-fucsia to-fuchsia-950 rounded-full pl-10 pr-10 text-white">
+          <span className="font-semibold p-2 bg-gradient-to-r from-fucsia to-fuchsia-950 rounded-tr-full rounded-bl-full  pl-10 pr-10 text-white">
             Empieza Ahora
           </span>
+          
         </div>
+         
       </div>
     </>
   );
