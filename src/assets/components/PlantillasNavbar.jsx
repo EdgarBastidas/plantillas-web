@@ -401,7 +401,7 @@ const PlantillasNavbar = () => {
               <p className="text-red-700 font-semibold text-center">
                 Nota:{" "}
                 <span className="text-black font-normal text-base">
-                  Por favor verifique muy biuen sus datos antes de enviar.
+                  Por favor verifique muy bien sus datos antes de enviar.
                 </span>
               </p>
             </div>
@@ -419,6 +419,7 @@ const PlantillasNavbar = () => {
               className="w-20 h-20 animate-spin"
             />
             <p className="text-center mt-4">Enviando datos...</p>
+            <p className="text-center mt-4">Cargando plantilla...</p>
           </div>
         </div>
       )}
