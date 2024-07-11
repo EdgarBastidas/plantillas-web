@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="">
           <nav className="bg-fondo p-2 sm:p-4">
             <div className="mx-auto">
-              <div className="flex flex-col items-center sm:flex-row ">
+              <div className="flex flex-col items-center sm:flex-row">
                 <div className="relative">
                   <img
                     className="object-cover w-[60%] sm:w-[70%] "
@@ -72,15 +72,7 @@ const Navbar = () => {
                     Páginas Web
                   </ScrollLink>
 
-                  {/* Enlace externo */}
-                  <a
-                    href="ponerenlaceapremiun"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer hover:text-fucsia text-white"
-                  >
-                    Plantillas Premium
-                  </a>
+                   
 
                   <ScrollLink
                     onClick={controlarMenu}
