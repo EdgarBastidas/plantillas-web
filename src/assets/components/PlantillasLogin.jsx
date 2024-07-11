@@ -411,8 +411,8 @@ const PlantillasLogin = () => {
 
       {/* Indicador de Carga */}
       {enviandoMensaje && (
-        <div className="fixed inset-0 flex items-center justify-center bg-zinc-700 bg-opacity-80 z-50">
-          <div className="bg-white p-4 sm:p-8 sm:mx-[10%] rounded-lg shadow-lg">
+        <div className="fixed inset-0 flex  items-center justify-center bg-zinc-700 bg-opacity-80 z-50">
+          <div className="flex flex-col justify-center items-center bg-white p-4 sm:p-8 sm:mx-[10%] rounded-lg shadow-lg">
             <img
               src={loadingGif}
               alt="Cargando..."
