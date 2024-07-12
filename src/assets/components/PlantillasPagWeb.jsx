@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactIcono from "../img/React-Icono.png";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { FiCheck } from "react-icons/fi";
+import { IoMdCart } from "react-icons/io";
 import loadingGif from "../img/loading.gif";
 
 const PlantillasPagWeb = () => {
@@ -13,7 +14,7 @@ const PlantillasPagWeb = () => {
   const [enviandoMensaje, setEnviandoMensaje] = useState(false); // Estado para controlar el envío del formulario
 
   useEffect(() => {
-    const fetchPlantillasWeb = async () => {
+    const fetchPlantillasPagWeb = async () => {
       try {
         const url =
           "https://raw.githubusercontent.com/EdgarBastidas/db_plantillas-web/main/web.json";
@@ -30,7 +31,7 @@ const PlantillasPagWeb = () => {
       }
     };
 
-    fetchPlantillasWeb();
+    fetchPlantillasPagWeb();
   }, []);
 
   const handleOpenModal = (plantilla) => {
@@ -97,54 +98,70 @@ const PlantillasPagWeb = () => {
             1
           </span>
           <span className="text-[2.5vh] sm:text-2xl font-semibold">
-            Plantillas  Web
+            Plantillas Paginas Web
           </span>
           <span className="bg-fucsia h-1 w-14 text-transparent rounded-full">
             1
           </span>
         </div>
 
-        <div className="pt-4 flex flex-wrap gap-8">
+        <div className="relative w-full sm:w-[25%] pt-4 flex flex-wrap">
           {plantillasW.map((plantilla) => (
             <div
               key={plantilla.id}
-              className="w-full sm:w-[30%] hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer"
+              className="hover:scale-105 transform transition duration-300 ease-in-out cursor-pointer"
             >
               <img
-                className="rounded-tr-3xl rounded-tl-3xl w-full object-cover"
+                className="w-full object-cover"
                 src={plantilla.image}
                 alt={plantilla.name}
               />
 
-              <div className="shadow-lg border border-gray-400 rounded-br-3xl rounded-bl-3xl">
-                <div className="flex flex-row justify-between gap-2 items-center p-2">
-                  <img src={ReactIcono} className="w-[6%]" alt="React Icono" />
+              <div className="shadow-lg border border-gray-400">
+                <div className="flex flex-row justify-start gap-2 items-center p-2">
                   <h5 className="text-base font-semibold text-gray-900">
                     {plantilla.name}
                   </h5>
-                  <h1 className="font-bold text-xl text-fucsia">
-                    $ {plantilla.price}
-                  </h1>
+                  <p className="text-base font-semibold text-gray-900">
+                    | React.js, Taiwind.css
+                  </p>
                 </div>
-                <div className="flex items-center justify-center pb-3">
-                  <button className="border rounded-md border-fucsia w-full text-fucsia bg-white sm:hover:bg-fucsia sm:hover:text-white flex flex-row justify-center items-center text-base p-1 ml-4 mr-4">
-                    <a
-                      href={plantilla.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <span className="">Ver Demo en línea</span>
-                    </a>
-                  </button>
+                <div className="flex text-sm pl-2 -mt-2">
+                  <p className="text-gray-500">
+                    by <span>Edgar Bastidas in Frontend Designs....</span>
+                  </p>
                 </div>
-                <div className="flex items-center justify-center pb-3">
-                  <button
-                    onClick={() => handleOpenModal(plantilla)}
-                    className="border rounded-md border-fondo w-full text-fondo bg-white sm:hover:text-white sm:hover:bg-fondo flex flex-row justify-center items-center text-base p-1 ml-4 mr-4"
-                  >
-                    <span className="">Detalles</span>
-                  </button>
+
+                <div className="flex flex-row gap-2">
+                  <div className="flex flex-col justify-start items-start p-2">
+                    <h1 className="font-bold text-2xl text-gray-700 -mt-1">
+                      $ {plantilla.price}
+                      <span className="text-base">.00</span>
+                    </h1>
+                    <p className="text-gray-600 text-sm">Responsive</p>
+                  </div>
+
+                  <div className="flex flex-col justify-center items-start p-2">
+                    <div className="flex flex-row justify-between items-center gap-4">
+                      <button
+                        onClick={() => handleOpenModal(plantilla)}
+                        className="border border-gray-500 w-10 text-gray-500 bg-white sm:hover:text-white sm:hover:bg-fondo flex flex-row justify-center items-center text-base p-2"
+                      >
+                        <span className="text-sm"><IoMdCart/></span>
+                      </button>
+
+                      <button className="border rounded-sm w-32 border-fucsia  text-fucsia bg-white sm:hover:bg-fucsia sm:hover:text-white text-sm p-1">
+                        <a
+                          href={plantilla.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <span className="">Demo en vivo</span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -176,31 +193,31 @@ const PlantillasPagWeb = () => {
                     </h1>
                   </div>
 
-                  <div className="flex flex-col p-2 mt-4">
+                  <div className="flex flex-col p-2 mt-1">
                     <div className="flex flex-row gap-2 items-center justify-start">
                       <FiCheck className="text-xl text-lime-600" />
-                      <h1 className="text-md font-semibold">Responsive</h1>
+                      <h1 className="text-md">Responsive</h1>
                     </div>
 
                     <div className="flex flex-row gap-2 items-center justify-start">
                       <FiCheck className="text-xl text-lime-600" />
-                      <h1 className="text-md font-semibold">
+                      <h1 className="text-md ">
                         Diseño elegante.
                       </h1>
                     </div>
 
                     <div className="flex flex-row gap-2 items-center justify-start">
                       <FiCheck className="text-xl text-lime-600" />
-                      <h1 className="text-md font-semibold">Personalizable.</h1>
+                      <h1 className="text-md font">Personalizable.</h1>
                     </div>
                     <div className="flex flex-row gap-2 items-center justify-start">
                       <FiCheck className="text-xl text-lime-600" />
-                      <h1 className="text-md font-semibold">
+                      <h1 className="text-md ">
                         Compra 100% segura.
                       </h1>
                     </div>
 
-                    <div className="mt-4 mb-4">
+                    <div className="mt-8 mb-4">
                       <button
                         onClick={handleOpenCompraModal}
                         className="border rounded-md border-fondo w-full text-white bg-fondo  text-base p-2"
@@ -411,9 +428,9 @@ const PlantillasPagWeb = () => {
 
       {/* Indicador de Carga */}
       {enviandoMensaje && (
-        <div className="fixed inset-0 flex items-center justify-center bg-zinc-700 bg-opacity-80 z-50">
+        <div className="fixed inset-0 flex  items-center justify-center bg-zinc-700 bg-opacity-80 z-50">
           <div className="flex flex-col justify-center items-center bg-white p-4 sm:p-8 sm:mx-[10%] rounded-lg shadow-lg">
-          <img
+            <img
               src={loadingGif}
               alt="Cargando..."
               className="w-20 h-20 animate-spin"
